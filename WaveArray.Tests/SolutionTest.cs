@@ -49,5 +49,19 @@ namespace WaveArray.Tests
             // Assert
             CollectionAssert.AreEqual(expected, actual);
         }
+
+        [TestMethod]
+        [ExpectedException(typeof(ArgumentNullException))]
+        public void Test_null()
+        {
+            // Arrange
+            List<int> data = null;
+            List<int> expected = new List<int> { 3, 2, 6, 4 };
+
+            // Act
+            List<int> actual = Solution.WaveArray(data);
+
+            // Assert            
+        }
     }
 }

@@ -4,6 +4,7 @@
  * a sequence such that a1 >= a2 <= a3 >= a4 <= a5.....
  */
 
+using System;
 using System.Collections.Generic;
 
 namespace Wave_Array
@@ -12,6 +13,11 @@ namespace Wave_Array
     {
         public static List<int> WaveArray(List<int> A)
         {
+            if (A == null)
+            {
+                throw new ArgumentNullException("input collection cannot be blank");
+            }
+
             // make sure the collection is sorted
             A.Sort();
 
